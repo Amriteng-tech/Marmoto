@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="product-container">
+        <div class="image-section">
+            <img id="main-image" src="image1.jpg" alt="Product Image">
+            <div class="thumbnail-section">
+                <img class="thumbnail" src="image1.jpg" onclick="changeImage('image1.jpg')">
+                <img class="thumbnail" src="image2.jpg" onclick="changeImage('image2.jpg')">
+                <img class="thumbnail" src="image3.jpg" onclick="changeImage('image3.jpg')">
+            </div>
+        </div>
+        <div class="details-section">
+            <h2>Embrace Sideboard</h2>
+            <p class="price">$<span id="price">12999.00</span> <span class="discount">35% Off</span></p>
+            <p class="original-price">$19999.00</p>
+            
+            <p>Choose a Color:</p>
+            <div class="color-options">
+                <span class="color" style="background: #2d2c2a;" onclick="selectColor(this)"></span>
+                <span class="color" style="background: #465652;" onclick="selectColor(this)"></span>
+                <span class="color" style="background: #A9B7F5;" onclick="selectColor(this)"></span>
+            </div>
+
+            <p>Choose a Size:</p>
+            <div class="size-options">
+                <button class="size" onclick="selectSize(this)">Small</button>
+                <button class="size" onclick="selectSize(this)">Medium</button>
+                <button class="size" onclick="selectSize(this)">Large</button>
+                <button class="size" onclick="selectSize(this)">Xtra Large</button>
+            </div>
+            
+            <div class="quantity">
+                <button onclick="changeQuantity(-1)">-</button>
+                <span id="quantity">1</span>
+                <button onclick="changeQuantity(1)">+</button>
+            </div>
+            
+            <button class="add-to-cart">Add to Cart</button>
+            
+            <p class="description">The Embrace Sideboard is a stylish wear. 
+                With a top cloth designed to provide superior protection and look great, 
+                this storage solution is both functional attractive.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
